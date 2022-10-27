@@ -58,6 +58,10 @@ const app = createApp({
 
         stopScroll(){
             clearInterval(this.scroll);
+        },
+        activeThumb(value){
+            this.indexActive = value;
+            clearInterval(this.scroll);
         }
 
     },
