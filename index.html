@@ -28,7 +28,7 @@
                 <div class="thumbs">
                     <div @click="prevGame" class="prev"></div>
                     <div @click="nextGame" class="next"></div>
-                    <div v-for="(value, index) in slides" class="thumb " :class="index === indexActive ? classActive : '' "  @mouseover="activeThumb(index)"
+                    <div v-for="(value, index) in slides" :key="index" class="thumb " :class="index === indexActive ? classActive : '' "  @mouseover="activeThumb(index)"
                     @mouseleave="autoScroll">
                         <img :src= slides[index].image  :alt=slides[index].title />
                     </div>
